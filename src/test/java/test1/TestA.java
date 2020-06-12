@@ -11,10 +11,7 @@ public class TestA extends Base {
 		System.out.println("Test A1");
 	}
 	
-	@Test
-	public void testA2() {
-		System.out.println("Test A2");
-	}
+
 	
 	@Test
 	public void testA3() {
