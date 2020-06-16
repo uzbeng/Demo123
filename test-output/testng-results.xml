@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-06-08T19:59:02 EDT" name="Default suite" finished-at="2020-06-08T19:59:02 EDT" duration-ms="43">
+  <suite started-at="2020-06-15T21:22:21 EDT" name="Default suite" finished-at="2020-06-15T21:22:22 EDT" duration-ms="590">
     <groups>
     </groups>
-    <test started-at="2020-06-08T19:59:02 EDT" name="Default test" finished-at="2020-06-08T19:59:02 EDT" duration-ms="43">
-      <class name="AssertionTest">
-        <test-method signature="testMixedAssert()[pri:0, instance:AssertionTest@501edcf1]" started-at="2020-06-08T19:59:02 EDT" name="testMixedAssert" finished-at="2020-06-08T19:59:02 EDT" duration-ms="11" status="FAIL">
-          <exception class="java.lang.AssertionError">
+    <test started-at="2020-06-15T21:22:21 EDT" name="Default test" finished-at="2020-06-15T21:22:22 EDT" duration-ms="590">
+      <class name="excelTest.ExcelDataPrint">
+        <test-method is-config="true" signature="setUpExcel()[pri:0, instance:excelTest.ExcelDataPrint@3b07a0d6]" started-at="2020-06-15T21:22:21 EDT" name="setUpExcel" finished-at="2020-06-15T21:22:22 EDT" duration-ms="549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpExcel -->
+        <test-method signature="printExcelData(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:excelTest.ExcelDataPrint@3b07a0d6]" started-at="2020-06-15T21:22:22 EDT" name="printExcelData" data-provider="users" finished-at="2020-06-15T21:22:22 EDT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[Checking boolean expected [true] but found [false]]]>
+              <![CDATA[java.lang.NullPointerException]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Checking boolean expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.failNotEquals(Assert.java:969)
-at org.testng.Assert.assertTrue(Assert.java:43)
-at AssertionTest.testMixedAssert(AssertionTest.java:56)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:51)
+at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:147)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:801)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:744)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:783)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -46,13 +44,24 @@ at org.testng.TestNG.run(TestNG.java:1007)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException
+at utilities.ExcelGetData.getTestData(ExcelGetData.java:49)
+at excelTest.ExcelDataPrint.dataProvider(ExcelDataPrint.java:20)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:78)
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:47)
+... 25 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMixedAssert -->
-      </class> <!-- AssertionTest -->
+        </test-method> <!-- printExcelData -->
+      </class> <!-- excelTest.ExcelDataPrint -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

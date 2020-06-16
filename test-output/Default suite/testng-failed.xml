@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AssertionTest">
+      <class name="excelTest.ExcelDataPrint">
         <methods>
-          <include name="testMixedAssert"/>
+          <include name="printExcelData"/>
+          <include name="setUpExcel"/>
         </methods>
-      </class> <!-- AssertionTest -->
+      </class> <!-- excelTest.ExcelDataPrint -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
